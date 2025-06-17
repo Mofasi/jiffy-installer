@@ -1,0 +1,16 @@
+{
+    "name": "mofasi/jiffy-installer",
+    "description": "Global installer for Jiffy PHP framework",
+    "type": "project",
+    "bin": ["jiffy-installer.php"],
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mofasi Pheeha",
+            "email": "mofasi.pheeha@blackpegonline.co.za"
+        }
+    ]
+}
