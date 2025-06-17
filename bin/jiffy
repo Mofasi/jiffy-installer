@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Mofasi\JiffyInstaller\Installer;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class NewCommand extends \Symfony\Component\Console\Command\Command
+{
+    protected static $defaultName = 'new';
+
+    protected function configure()
+    {
+        $this
+            ->setDescription('Create a new Jiffy project')
+            ->addArgument('name', InputArgument::REQUIRED, 'Project name');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $projectName = $input->getArgument('name');
+        $installer = new Installer($projectName, $output);
+        $installer->install();
+        return 0;
+    }
+}
+
+$application = new Application('Jiffy Installer', '1.0.0');
+$application->add(new NewCommand());
+$application->setDefaultCommand('new');
+$application->run();
