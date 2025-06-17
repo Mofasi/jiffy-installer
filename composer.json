@@ -1,10 +1,17 @@
 {
-    "name": "mofasi/jiffy-installer",
+    "name": "mofasi-pheeha/jiffy-installer",
     "description": "Global installer for Jiffy PHP framework",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "bin": ["jiffy-installer.php"],
     "require": {
         "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiffy\\Installer\\": "src/"
+        }
     },
     "license": "MIT",
     "authors": [

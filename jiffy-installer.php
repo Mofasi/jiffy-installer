@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * Jiffy Global Installer
  * 
- * Install with: composer global require mofasi/jiffy-installer
+ * Install with: composer global require mofasi-pheeha/jiffy-installer
  * Then make sure ~/.composer/vendor/bin is in your PATH
  */
 
